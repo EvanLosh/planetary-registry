@@ -11,7 +11,7 @@ function NewPlanetForm({ handleAddPlanet }) {
         population: 0
     })
 
-    function handleInputChange(e) {
+    function onInputChange(e) {
         setForm({
             ...form,
             [e.target.name]: e.target.value
@@ -26,10 +26,10 @@ function NewPlanetForm({ handleAddPlanet }) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" name="name" placeholder="Name" value={form.name} onChange={handleInputChange} />
-            <input type="text" name="climate" placeholder="Climate" value={form.climate} onChange={handleInputChange} />
-            <input type="text" name="terrain" placeholder="Terrain" value={form.terrain} onChange={handleInputChange} />
-            <input type="text" name="population" placeholder="Population" value={form.population} onChange={handleInputChange} />
+            <input type="text" name="name" placeholder="Name" value={form.name} onChange={onInputChange} />
+            <input type="text" name="climate" placeholder="Climate" value={form.climate} onChange={onInputChange} />
+            <input type="text" name="terrain" placeholder="Terrain" value={form.terrain} onChange={onInputChange} />
+            <input type="text" name="population" placeholder="Population" value={form.population} onChange={onInputChange} />
             <input type="submit" value="Add" />
         </form>
     );

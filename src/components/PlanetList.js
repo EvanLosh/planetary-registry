@@ -3,11 +3,22 @@ import Planet from "./Planet"
 
 function PlanetList({ planets, searchString }) {
 
-    const planetComponents = planets.filter(
-        (planet) => { return (planet.name.includes(searchString) || planet.climate.includes(searchString) || planet.terrain.includes(searchString) || planet.population.includes(searchString)) }
-    ).map(planet =>
-        <Planet key={planet.id} name={planet.name} climate={planet.climate} terrain={planet.terrain} population={planet.population} />
-    )
+    const planetComponents = planets
+        .filter(planet => {
+            return (planet.name.includes(searchString)
+                || planet.climate.includes(searchString)
+                || planet.terrain.includes(searchString)
+                || planet.population.includes(searchString))
+        })
+        .map(planet =>
+            <Planet
+                key={planet.id}
+                name={planet.name}
+                climate={planet.climate}
+                terrain={planet.terrain}
+                population={planet.population}
+            />
+        )
 
     return (
         <table>

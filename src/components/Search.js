@@ -6,10 +6,14 @@ function Search({ searchString, setSearchString }) {
         setSearchString(e.target.value)
     }
 
-
     return (
         <div>
-            <input type="text" onChange={() => console.log("Searching...")} placeholder="Search..." onChange={onSearchChange} value={searchString} />
+            <input
+                type="text"
+                placeholder="Search..."
+                onChange={onSearchChange}
+                value={searchString}
+            />
         </div>
     );
 }

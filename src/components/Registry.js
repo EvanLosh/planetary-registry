@@ -5,10 +5,11 @@ import PlanetList from "./PlanetList"
 
 function Registry({ planets, handleAddPlanet }) {
 
-    // console.log(planets)
-    // state for search
     const [searchString, setSearchString] = useState('')
 
+    function handleSearchChange(e) {
+        setSearchString(e.target.value)
+    }
 
 
     return (
