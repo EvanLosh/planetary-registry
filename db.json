@@ -1210,6 +1210,20 @@
       "climate": "cold",
       "terrain": "rocky",
       "population": "1"
+    },
+    {
+      "name": "apple",
+      "climate": "cold",
+      "terrain": "big",
+      "population": "1",
+      "id": 61
+    },
+    {
+      "name": "perplexed",
+      "climate": "purple",
+      "terrain": "paintings",
+      "population": "perpendicular",
+      "id": 62
     }
   ]
 }

@@ -3,14 +3,20 @@ import Search from "./Search"
 import NewPlanetForm from "./NewPlanetForm"
 import PlanetList from "./PlanetList"
 
-function Registry() {
+function Registry({ planets, handleAddPlanet }) {
 
-    return(
+    // console.log(planets)
+    // state for search
+    const [searchString, setSearchString] = useState('')
+
+
+
+    return (
         <div className="registry">
-            <Search />
+            <Search searchString={searchString} setSearchString={setSearchString} />
             <div className="content">
-                <PlanetList />
-                <NewPlanetForm />
+                <PlanetList planets={planets} searchString={searchString} />
+                <NewPlanetForm handleAddPlanet={handleAddPlanet} />
             </div>
         </div>
     )
